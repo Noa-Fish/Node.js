@@ -1,0 +1,24 @@
+{
+  "name": "tp_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noa-Fish/TP1_NODE_WATEL.git"
+  },
+  "author": "Noa Watel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noa-Fish/TP1_NODE_WATEL/issues"
+  },
+  "homepage": "https://github.com/Noa-Fish/TP1_NODE_WATEL#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.0.0",
+    "morgan": "^1.10.0"
+  }
+}
