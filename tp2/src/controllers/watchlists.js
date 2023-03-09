@@ -11,7 +11,12 @@ async function createWatchlist(req, res, next) {
             //pour chaque user qui sont dans le tableau tab_users de la watchlist 
             for (let i = 0; i < req.body.tab_users.length; i++) {
                 //on ajoute l'id de la watchlist dans le tableau tab_watchlist de l'user
-                await updateOne('user',{'_id' : req.body.tab_users[i]}, {$push: {'tab_watchlist': req.body._id}});
+                console.log(req.body.tab_users[i])
+                await updateOne('user',{'_id' :new ObjectId(req.body.tab_users[i])}, {$push: {'tab_watchlist': req.body._id}});
+            }
+            for (let i = 0; i < req.body.tab_items.length; i++) {
+                //on ajoute l'id de la watchlist dans le tableau tab_items de l'user
+                await updateOne('item',{'_id' :new ObjectId(req.body.tab_items[i])}, {$push: {'tab_watchlist': req.body._id}});
             }
             return res.send("watchlist created")
         }
